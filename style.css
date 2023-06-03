@@ -65,4 +65,5 @@ body {
     border: none;
     color: white;
     background-color: rebeccapurple;
+    cursor: pointer;
 }

@@ -97,5 +97,17 @@ function showResult() {
     document.querySelector('.score').textContent = `Wynik końcowy:  ${userScore}`;
 }
 
+function playAgain() {
+    currentQuestion = 0;
+    correctAnswers = 0;
+    incorrectAnswers = 0;
+    userScore = 0;
+    resultScreen.style.display = 'none';
+    gameScreen.style.display = 'block';
+    showQuestion(currentQuestion);
+}
+
+
 submit.addEventListener('click', submitAnswer);
+play.addEventListener('click', playAgain)
 showQuestion(currentQuestion);
