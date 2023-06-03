@@ -85,7 +85,16 @@ function submitAnswer() {
 
 
 function showResult() {
+    gameScreen.style.display = 'none';
+    resultScreen.style.display = 'block';
 
+
+    userScore = (correctAnswers - incorrectAnswers) * 100;
+
+
+    document.querySelector('.correct').textContent = `Poprawne odpowiedzi: ${correctAnswers}`;
+    document.querySelector('.wrong').textContent = `Nie poprawne odpowiedzi:  ${incorrectAnswers}`;
+    document.querySelector('.score').textContent = `Wynik końcowy:  ${userScore}`;
 }
 
 submit.addEventListener('click', submitAnswer);
